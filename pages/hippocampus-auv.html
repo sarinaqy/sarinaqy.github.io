@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hippocampus AUV — Sarina Lin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+  </script>
+
+  <!-- PAGE HERO + INTRO: cream, centered -->
+  <div class="page-hero">
+    <h1>Hippocampus AUV Intern</h1>
+    <p class="section-label">Hamburg University of Technology · May 2024 – Aug 2024</p>
+    <p class="intro">
+      During this internship, I worked with the Hippocampus research team 
+      at the Hamburg University of Technology in Germany. My work was on 
+      developing pH and electrical conductivity sensors and their 
+      integration onto an AUV to measure the quality of an ecosystem.
+    </p>
+  </div>
+
+  <!-- BLOCK 1 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">01 — Circuitry Design</h2>
+      <p>
+        During development, I had to consider that conductivity sensors output a voltage, 
+        while pH sensors measure a voltage, so I developed an isolation interface to prevent 
+        interference during operation. This allowed all the sensor voltage measurements to 
+        be routed to the same I2C port of a Raspberry Pi before processing the electrical 
+        input into its corresponding measurement value.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+       <img class="block-img" src="../images/experience/multiarray.jpg" alt="Multiarray compliant mechanism">
+    </div>
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">02 — PCB Design</h2>
+      <p>
+        I used a 4-layer PCB to minimize wiring complications and improve power connection consistency. 
+        Test points were added to ensure power connection consistency during the debugging process. 
+        The size of the PCBs were minimized for integration into the AUV's capsule with the electrical 
+        conductivity sensor being the largest at under ​2.5x5cm.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/flexpcb.jpg" alt="Flexible PCB design">
+    </div>
+  </div>
+
+  <!-- BLOCK 3 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">03 — PH Sensor</h2>
+      <p>
+        In the pH sensor, the circuit had components that made the voltage signal readable by the 
+        Raspberry Pi through shifting and multiplying the voltage signal. The inclusion of a low-pass 
+        filter at the end served to smooth out the signal. These additions resulted in a sensor with 
+        accuracy of up to 0.01.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/earlyfingerprototype.jpg" alt="Early robotic integration prototype">
+    </div>
+  </div>
+
+  <!-- BLOCK 4 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">04 — Electrical Conductivity Sensor</h2>
+      <p>
+        The electrical conductivity sensor required the generation of an AC wave, and after much 
+        design iteration, I eventually landed on using a relaxation oscillator to provide a square wave. 
+        This simplified the need for external circuitry while still providing a consistent source.
+      </p>
+      <p>
+        Another major addition to the sensor was the use of an octal SPST switch to provide a 3x larger 
+        range of measurable salinities when compared to commercial options. ​
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/earlyfingerprototype.jpg" alt="Early robotic integration prototype">
+    </div>
+  </div>
+
+  <!-- BLOCK 5 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">05 — Circuit Fabrication</h2>
+      <p>
+        Due to using 0603 resistors and parts with similar small builds, I reflow soldered 
+        the parts on to minimize human error when manufacturing. During testing, there was 
+        found to be an issue with an opamp design. Luckily, this issue was easily fixed 
+        by cutting and rewiring two traces on the PCB.​
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/earlyfingerprototype.jpg" alt="Early robotic integration prototype">
+    </div>
+  </div>
+
+  <!-- BLOCK 6 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">06 — Electrical Conductivity Sensor</h2>
+      <p>
+        On top of writing the code for the sensors, I also integrated ROS into the sensors 
+        for remote data accessing and live data plotting. Through this, I could run and calibrate 
+        all of the sensors remotely without the use of a direct cable to the sensor boards, 
+        providing increased maneuverability during deployment of the AUV.​
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/earlyfingerprototype.jpg" alt="Early robotic integration prototype">
+    </div>
+  </div>
+
+</body>
+</html>
