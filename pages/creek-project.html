@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creek Project — Sarina Lin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+  </script>
+
+  <!-- PAGE HERO + INTRO: cream, centered -->
+  <div class="page-hero">
+    <h1>The Creek Project</h1>
+    <p class="section-label">Conejo Valley Botanic Garden · Jan 2019 – Mar 2022</p>
+    <p class="intro">
+      I began the Creek Project, with a mission of assisting the Conejo Valley Botanic Garden 
+      in their efforts to maintain the Garden's natural beauty with a focus on the capture of 
+      invasive crayfish and the mitigation of their growth. 
+    </p>
+  </div>
+
+  <!-- BLOCK 1 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">01 — Crayfish Mitigation</h2>
+      <p>
+        Crayfish are a non-native species in California and constantly wreak havoc on ecosystems 
+        due to the lack of local predators. To combat this in my own community, I led a team of about 
+        10 volunteers weekly in capturing crayfish and measuring the number of crayfish caught and their 
+        length. We did this consistently for three years, using the data from the first year to create a 
+        baseline of crayfish activity ​in every month, and using the data from later years to measure the 
+        effects of our solutions, such as watercress plantings and algae removal.
+      </p>
+      <p>
+        After our weekly trappings, I would import all our data into Excel and find the average number of 
+        crayfish and size at each location, and create a graph of the distribution for that day. At the end 
+        of the year, this data was summed up into one sheet and into ArcGIS, with charts representing the 
+        crayfish fluctuations in each location and the crayfish fluctuations overall. From this data, I found 
+        that the crayfish were the least active from late October to early April, so the team and I focused our 
+        trapping efforts on the summer months and used the winter months to analyze our data and research solutions.
+      </p>
+      <p>
+        Through our efforts, we were able to decrease the crayfish population by about 10 percent.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+       <img class="block-img" src="../images/experience/multiarray.jpg" alt="Multiarray compliant mechanism">
+    </div>
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">02 — Soil and Water Analysis</h2>
+      <p>
+        During our weekly meetings, the team and I would take measurements on the water quality through its 
+        dissolved oxygen content, pH, and total dissolved solids. Similar to our crayfish measurements, we 
+        utilized these measurements to create a yearlong baseline and measure the effects of our solutions.
+      </p>
+      <p>
+        On top of that, these measurements were used to understand how exactly crayfish affected the surrounding 
+        area. In areas of high crayfish activity, it was found that there were decreased dissolved oxygen levels 
+        and increased total dissolved solids, creating an environment that was inhospitable for many of the species 
+        that previously inhabited the area. Therefore, I focused the team's efforts not only on crayfish removal, 
+        but also on the mitigation of their effects on the environment. 
+      </p>
+      <p>
+        ​By the end of my time with the project, we had increased the dissolved oxygen levels by up to 5 mg/L, 
+        bringing the levels from an inhospitable 4 to 6 mg/L to about 7 or 8 mg/L, resulting in a massive growth 
+        of the amphibian community at the creek. 
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/flexpcb.jpg" alt="Flexible PCB design">
+    </div>
+  </div>
+
+  <!-- BLOCK 3 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">03 — Solutions</h2>
+      <p>
+        To combat crayfish growth and minimize their negative effects on the creek, the team and I tested a few 
+        different solutions, but our most impactful solution by far was the implementation of watercress. During 
+        one of our research sessions, when looking into solutions that had been implemented in other creeks, we 
+        found watercress. 
+      </p>
+      <p>
+        Watercress addressed many of our issues: it was a native species that naturally improved water quality and 
+        provided spaces for tadpoles to hide from crayfish. It also was easy to source and easy to grow.
+      </p>
+      <p>
+        In all of this, I led the team in deciding where to plant the watercress and subsequently, where to focus 
+        our trapping efforts. I chose areas that were shallow for our plantings, because they would not only encourage 
+        watercress growth, but also provide a natural barrier to crayfish movement up and downstream. I constantly walked 
+        the length of the creek to survey for the best locations, becoming no stranger to slips and falls into the creek.
+      </p>
+      <p>
+        So, the team and I then began strategically planting watercress, effectively ensuring that the crayfish had nowhere 
+        to go other than in our traps. Through this, the setting of our traps became much more efficient, leading to our 
+        10% decrease in crayfish population and 30% increase in dissolved oxygen.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/earlyfingerprototype.jpg" alt="Early robotic integration prototype">
+    </div>
+  </div>
+
+  <!-- BLOCK 4 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">04 — Exposure Efforts</h2>
+      <p>
+        Through months of careful planning, the Earth Day Event at the Conejo Valley Botanic Garden hosted over 200 
+        attendees, educating attendees while providing them the tools to spread change in their communities.
+      </p>
+      <p>
+        In the Bobbing for Crayfish activity, volunteers led tours around the creek, ultimately ending at a crayfish-dense 
+        area where attendees had the chance to catch their own crayfish by sticking a pole with a piece of gum at the end 
+        of it into the water. This game relied on luck and reflexes and made the capture of crayfish into an activity that 
+        people of all ages could enjoy partaking in, shining a positive light on our removal efforts.​
+      </p>
+      <p>
+        In another activity, Papermaking, we used shredded paper and a mesh net to allow people to make their own sheets of 
+        paper, which they could then decorate with invasive ivy leaves and flowers from the Botanic Garden. Through this, 
+        we showed attendees invasive plants that they may encounter in their own backyards and fun ways that they can use 
+        these plants.
+      </p>
+      <p>
+        Then, as people were leaving, we would hand them an easy to raise native plant. Regardless of location, the plant 
+        was likely to survive and improve its local ecosystem. simplified the need for external circuitry while still 
+        providing a consistent source.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/earlyfingerprototype.jpg" alt="Early robotic integration prototype">
+    </div>
+  </div>
+
+</body>
+</html>
