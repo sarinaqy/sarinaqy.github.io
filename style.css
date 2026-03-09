@@ -101,7 +101,6 @@ nav {
 .hero-avatar {
   width: 340px; height: 420px; object-fit: cover;
   border-radius: 2px;
-  box-shadow: 16px 20px 0 var(--light-line);
 }
 
 .avatar-placeholder {
