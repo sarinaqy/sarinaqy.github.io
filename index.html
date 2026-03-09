@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sarina Lin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Sarina Lin</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#experience">Experience ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="pages/undergraduate-researcher.html">Undergraduate Researcher</a></li>
+          <li><a href="pages/hippocampus-auv.html">Hippocampus AUV Intern</a></li>
+          <li><a href="pages/simi-valley.html">Simi Valley Intern</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#extras">Extra-Curriculars ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="pages/calsol.html">CalSol</a></li>
+          <li><a href="pages/creek-project.html">The Creek Project</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Mechanical Engineering · UC Berkeley</p>
+      <h1 class="hero-name">Sarina<br>Lin</h1>
+      <p class="hero-bio">
+        I'm a mechanical engineering senior at <strong>UC Berkeley</strong>, graduating May 2026,
+        with a minor in EECS. In Fall 2026, I'll begin a Master's in
+        <strong>Robotics, Systems, and Controls at ETH Zürich</strong>.
+        I've worked primarily in robotics and PCB design research, with a focus on building sensing systems.
+        My favorite part of engineering is seeing ideas move from design to reality.
+        Outside of engineering, I enjoy snowboarding, baking, and traveling —
+        Northern Europe being home to some of my favorite cities.
+      </p>
+      <a class="hero-cta" href="#experience">View my work →</a>
+    </div>
+    <div class="hero-image-wrap">
+      <!--
+        TO ADD YOUR PHOTO:
+        1. Upload your photo to your GitHub repo (e.g. as "images/profile.jpg")
+        2. Replace the <div class="avatar-placeholder"> block below with:
+           <img class="hero-avatar" src="images/profile.jpg" alt="Sarina Lin">
+      -->
+      <div class="avatar-placeholder">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span>Add your photo here</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <p class="section-label">Work Experience</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="exp-grid">
+
+      <div class="exp-card">
+        <p class="exp-tag">Research</p>
+        <h3 class="exp-title">Undergraduate Researcher</h3>
+        <p class="exp-org">Additive Manufacturing &amp; Metamaterials Lab · UC Berkeley</p>
+        <p class="exp-desc">
+          Designed flexible PCBs for piezoelectric sensors and modeled 3D printed compliant mechanisms,
+          creating a system for point force detection on robotic hand modules.
+        </p>
+        <a class="exp-link" href="pages/undergraduate-researcher.html">Learn More →</a>
+      </div>
+
+      <div class="exp-card">
+        <p class="exp-tag">Robotics · Hamburg, Germany</p>
+        <h3 class="exp-title">Hippocampus AUV Intern</h3>
+        <p class="exp-org">Hamburg University of Technology</p>
+        <p class="exp-desc">
+          Worked on sensor circuit integration into a micro AUV for environmental monitoring,
+          focusing on the development of pH and electrical conductivity sensors.
+        </p>
+        <a class="exp-link" href="pages/hippocampus-auv.html">Learn More →</a>
+      </div>
+
+      <div class="exp-card">
+        <p class="exp-tag">Civil Engineering</p>
+        <h3 class="exp-title">Assistant Engineer</h3>
+        <p class="exp-org">City of Simi Valley · Public Works</p>
+        <p class="exp-desc">
+          Designed construction plans and pump configurations for waterline replacement projects,
+          while applying for a federal grant to fund a pump system upgrade.
+        </p>
+        <a class="exp-link" href="pages/simi-valley.html">Learn More →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXTRA CURRICULARS -->
+  <section id="extras">
+    <p class="section-label">Outside the Lab</p>
+    <h2 class="section-title">Extra-Curriculars</h2>
+    <div class="exp-grid">
+
+      <div class="exp-card">
+        <p class="exp-tag">Solar Racing · UC Berkeley</p>
+        <h3 class="exp-title">CalSol</h3>
+        <p class="exp-org">UC Berkeley Solar Car Racing Team</p>
+        <p class="exp-desc">
+          As project lead of enclosures, I work on electronics and solar integration into the vehicle
+          that competes annually at the Formula Sun Grand Prix, ensuring safety and regulation compliance.
+        </p>
+        <a class="exp-link" href="pages/calsol.html">Learn More →</a>
+      </div>
+
+      <div class="exp-card">
+        <p class="exp-tag">Environmental · Conejo Valley</p>
+        <h3 class="exp-title">The Creek Project</h3>
+        <p class="exp-org">Conejo Valley Botanic Garden</p>
+        <p class="exp-desc">
+          Measured year-round water quality and developed solutions for combating quality issues
+          to restore the health of the local ecosystem and raise awareness of the issue.
+        </p>
+        <a class="exp-link" href="pages/creek-project.html">Learn More →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-title">Contact</h2>
+    <p>Interested in my work or want to connect? Feel free to reach out.</p>
+    <!-- Replace with your real email address -->
+    <a class="contact-email" href="mailto:your@email.com">your@email.com</a>
+  </section>
+
+  <footer>
+    © 2026 Sarina Lin · Built with GitHub Pages
+  </footer>
+
+</body>
+</html>
