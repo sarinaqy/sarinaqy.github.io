@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assistant Engineer — Sarina Lin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+  </script>
+
+  <!-- PAGE HERO + INTRO: cream, centered -->
+  <div class="page-hero">
+    <h1>Assistant Engineer</h1>
+    <p class="section-label">City of Simi Valley · May 2023 – Aug 2023</p>
+    <p class="intro">
+      At the City of Simi Valley, I worked in the Public Works department. My primary focus 
+      was on waterlines and pump systems, but I also assisted in applying for grants.
+    </p>
+  </div>
+
+  <!-- BLOCK 1 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">01 — Waterline Replacement Project</h2>
+      <p>
+        My main project with the City of Simi Valley was to develop plans for a waterline 
+        replacement project in a residential area. When deciding on a design, I had to take 
+        into account how the customers would be affected and how the design would be implemented. 
+        I had to minimize water shutoff time and production cost. 
+      </p>
+      <p>
+        I developed multiple plans, with one plan highlining over the existing waterline to 
+        minimize installation costs, and with another plan installing the waterline next to 
+        the existing waterline to minimize water shutoff time. In each of these plans I had to 
+        analyze how the new waterline would interact with existing infrastructure such as gas lines, 
+        sewer lines, and power poles.
+      </p>
+      <p>
+        After a final design was determined, I created the site plans that would be sent to contractors. 
+        This site plan not only detailed the location and depth of the new waterline, but also showed 
+        connection details with instructions on installation.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+       <img class="block-img" src="../images/experience/multiarray.jpg" alt="Multiarray compliant mechanism">
+    </div>
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">02 — Benefit-Cost Analysis</h2>
+      <p>
+        Apart from developing waterline replacement plans, I prepared the Benefit-Cost Analysis 
+        portion of a federal grant application for the purchase of emergency generators at pump stations.
+      </p>
+      <p>
+        I initially researched what info was needed, including the cost of a generator and the population 
+        affected by a potential pump shutdown. I collected information on the cost of upkeep and the 
+        frequency of the pump station shutting down. Through this, I contacted people within and outside 
+        of my organization for the needed information.
+      </p>
+      <p>
+        Finally, when the information was collected, I utilized a federal benefit-cost analysis toolkit to 
+        calculate the benefit-cost ratio. I had to constantly work through glitches in the toolkit, but I was 
+        able to work through it and provide an organized benefit-cost analysis.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/flexpcb.jpg" alt="Flexible PCB design">
+    </div>
+  </div>
+</body>
+</html>
