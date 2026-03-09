@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sarina Lin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f8f5f0;
+      --dark: #1a1a18;
+      --warm: #c8a97e;
+      --mid: #6b6560;
+      --light-line: #e4dfd8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 4rem;
+      background: rgba(248,245,240,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light-line);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 600;
+      letter-spacing: 0.08em;
+      text-decoration: none; color: var(--dark);
+    }
+
+    .nav-links { display: flex; gap: 2.4rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--mid);
+      font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--warm); }
+
+    .dropdown { position: relative; }
+    .dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 0;
+      background: var(--cream); border: 1px solid var(--light-line);
+      min-width: 200px; padding: 0.6rem 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu li { list-style: none; }
+    .dropdown-menu a {
+      display: block; padding: 0.5rem 1.2rem;
+      font-size: 0.78rem; color: var(--mid);
+    }
+    .dropdown-menu a:hover { color: var(--dark); background: var(--light-line); }
+
+    /* HERO */
+    #home {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 8rem 4rem 4rem;
+      gap: 4rem;
+    }
+
+    .hero-text { }
+    .hero-eyebrow {
+      font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--warm); margin-bottom: 1rem;
+    }
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 6vw, 5.5rem);
+      font-weight: 300; line-height: 1.05;
+      margin-bottom: 1.8rem;
+    }
+    .hero-bio {
+      font-size: 1rem; color: var(--mid);
+      max-width: 480px; line-height: 1.8;
+      margin-bottom: 2.4rem;
+    }
+    .hero-bio strong { color: var(--dark); font-weight: 500; }
+
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      text-decoration: none;
+      border-bottom: 1px solid var(--warm);
+      color: var(--dark); font-size: 0.88rem;
+      letter-spacing: 0.06em; padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .hero-cta:hover { color: var(--warm); }
+
+    .hero-image-wrap {
+      display: flex; justify-content: center; align-items: center;
+    }
+    .hero-avatar {
+      width: 340px; height: 420px; object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 16px 20px 0 var(--light-line);
+    }
+
+    .avatar-placeholder {
+      width: 340px; height: 420px;
+      background: linear-gradient(135deg, #e8e0d5 0%, #d4c9bc 100%);
+      border-radius: 2px;
+      box-shadow: 16px 20px 0 var(--light-line);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.5rem;
+      color: var(--mid); font-size: 0.8rem; text-align: center;
+    }
+    .avatar-placeholder svg { opacity: 0.4; }
+
+    /* SECTION SHARED */
+    section { padding: 6rem 4rem; }
+    .section-label {
+      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--warm); margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300; margin-bottom: 3rem;
+    }
+
+    /* EXPERIENCE */
+    #experience { background: #fff; }
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+
+    .exp-card {
+      padding: 2.4rem;
+      border: 1px solid var(--light-line);
+      background: var(--cream);
+      transition: box-shadow 0.3s, transform 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .exp-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 3px; height: 0; background: var(--warm);
+      transition: height 0.35s ease;
+    }
+    .exp-card:hover::before { height: 100%; }
+    .exp-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+
+    .exp-tag {
+      font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--warm); margin-bottom: 0.6rem;
+    }
+    .exp-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 600;
+      margin-bottom: 0.3rem; line-height: 1.2;
+    }
+    .exp-org { font-size: 0.82rem; color: var(--mid); margin-bottom: 1rem; }
+    .exp-desc { font-size: 0.9rem; color: var(--mid); line-height: 1.7; }
+    .exp-link {
+      display: inline-block; margin-top: 1.2rem;
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--dark); text-decoration: none;
+      border-bottom: 1px solid var(--light-line);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .exp-link:hover { border-color: var(--warm); color: var(--warm); }
+
+    /* EXTRA CURRICULARS */
+    #extras { background: #fff; }
+    .extras-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+    .extra-card {
+      padding: 2.4rem 2rem;
+      border-bottom: 1px solid var(--light-line);
+    }
+    .extra-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem; font-weight: 300; color: var(--light-line);
+      line-height: 1; margin-bottom: 0.8rem;
+    }
+    .extra-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; margin-bottom: 0.4rem;
+    }
+    .extra-org { font-size: 0.8rem; color: var(--warm); margin-bottom: 0.8rem; letter-spacing: 0.06em; }
+    .extra-desc { font-size: 0.9rem; color: var(--mid); line-height: 1.7; }
+    .extra-link {
+      display: inline-block; margin-top: 1rem;
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--dark); text-decoration: none;
+      border-bottom: 1px solid var(--light-line);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .extra-link:hover { border-color: var(--warm); color: var(--warm); }
+
+    /* CONTACT */
+    #contact {
+      background: var(--cream); color: var(--dark);
+      text-align: center; padding: 6rem 4rem;
+    }
+    #contact .section-label { color: var(--warm); }
+    #contact .section-title { color: var(--dark); margin-bottom: 1rem; }
+    #contact p { color: var(--mid); max-width: 440px; margin: 0 auto 2.4rem; }
+    .contact-email {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; color: var(--warm);
+      text-decoration: none;
+      border-bottom: 1px solid var(--warm);
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+    .contact-email:hover { opacity: 0.7; }
+
+    footer {
+      background: rgba(248,245,240,0.92); color: var(--mid);
+      text-align: center;
+      font-size: 0.78rem; letter-spacing: 0.08em;
+      padding: 1.5rem;
+      border-top: 1px solid var(--light-line);
+    }
+
+    /* no scroll animations */
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1.2rem 2rem; }
+      #home { grid-template-columns: 1fr; padding: 7rem 2rem 4rem; text-align: center; }
+      .hero-image-wrap { order: -1; }
+      .avatar-placeholder { width: 260px; height: 320px; }
+      .hero-bio { margin: 0 auto 2rem; }
+      section { padding: 4rem 2rem; }
+      .exp-grid, .extras-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="#home">Sarina Lin</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li class="dropdown">
+        <a href="#experience">Experience ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#undergrad">Undergraduate Researcher</a></li>
+          <li><a href="#hippocampus">Hippocampus AUV Intern</a></li>
+          <li><a href="#simi">Simi Valley Intern</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#extras">Extra-Curriculars ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#calsol">CalSol</a></li>
+          <li><a href="#creek">The Creek Project</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Mechanical Engineering · UC Berkeley</p>
+      <h1 class="hero-name">Sarina<br>Lin</h1>
+      <p class="hero-bio">
+        I'm a mechanical engineering senior at <strong>UC Berkeley</strong>, graduating May 2026,
+        with a minor in EECS. In Fall 2026, I'll begin a Master's in
+        <strong>Robotics, Systems, and Controls at ETH Zürich</strong>.
+        I've worked primarily in robotics and PCB design research, with a focus on building sensing systems.
+        My favorite part of engineering is seeing ideas move from design to reality.
+        Outside of engineering, I enjoy snowboarding, baking, and traveling —
+        Northern Europe being home to some of my favorite cities.
+      </p>
+      <a class="hero-cta" href="#experience">View my work →</a>
+    </div>
+    <div class="hero-image-wrap">
+      <!--
+        TO ADD YOUR PHOTO:
+        1. Upload your photo to your GitHub repo (e.g. as "photo.jpg")
+        2. Replace the <div class="avatar-placeholder"> block below with:
+           <img class="hero-avatar" src="photo.jpg" alt="Sarina Lin">
+      -->
+      <div class="avatar-placeholder">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span>Add your photo here</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <p class="section-label">Work Experience</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="exp-grid">
+
+      <div class="exp-card" id="undergrad">
+        <p class="exp-tag">Research</p>
+        <h3 class="exp-title">Undergraduate Researcher</h3>
+        <p class="exp-org">Additive Manufacturing &amp; Metamaterials Lab · UC Berkeley</p>
+        <p class="exp-desc">
+          Designed flexible PCBs for piezoelectric sensors and modeled 3D printed compliant mechanisms,
+          creating a system for point force detection on robotic hand modules.
+        </p>
+        <a class="exp-link" href="#">Learn More →</a>
+      </div>
+
+      <div class="exp-card" id="hippocampus">
+        <p class="exp-tag">Robotics · Hamburg, Germany</p>
+        <h3 class="exp-title">Hippocampus AUV Intern</h3>
+        <p class="exp-org">Hamburg University of Technology</p>
+        <p class="exp-desc">
+          Worked on sensor circuit integration into a micro AUV for environmental monitoring,
+          focusing on the development of pH and electrical conductivity sensors.
+        </p>
+        <a class="exp-link" href="#">Learn More →</a>
+      </div>
+
+      <div class="exp-card" id="simi">
+        <p class="exp-tag">Civil Engineering</p>
+        <h3 class="exp-title">Assistant Engineer</h3>
+        <p class="exp-org">City of Simi Valley · Public Works</p>
+        <p class="exp-desc">
+          Designed construction plans and pump configurations for waterline replacement projects,
+          while applying for a federal grant to fund a pump system upgrade.
+        </p>
+        <a class="exp-link" href="#">Learn More →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXTRA CURRICULARS -->
+  <section id="extras">
+    <p class="section-label">Outside the Lab</p>
+    <h2 class="section-title">Extra-Curriculars</h2>
+    <div class="exp-grid">
+
+      <div class="exp-card" id="calsol">
+        <p class="exp-tag">Solar Racing · UC Berkeley</p>
+        <h3 class="exp-title">CalSol</h3>
+        <p class="exp-org">UC Berkeley Solar Car Racing Team</p>
+        <p class="exp-desc">
+          As project lead of enclosures, I work on electronics and solar integration into the vehicle
+          that competes annually at the Formula Sun Grand Prix, ensuring safety and regulation compliance.
+        </p>
+        <a class="exp-link" href="#">Learn More →</a>
+      </div>
+
+      <div class="exp-card" id="creek">
+        <p class="exp-tag">Environmental · Conejo Valley</p>
+        <h3 class="exp-title">The Creek Project</h3>
+        <p class="exp-org">Conejo Valley Botanic Garden</p>
+        <p class="exp-desc">
+          Measured year-round water quality and developed solutions for combating quality issues
+          to restore the health of the local ecosystem and raise awareness of the issue.
+        </p>
+        <a class="exp-link" href="#">Learn More →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-title">Contact</h2>
+    <p>Interested in my work or want to connect? Feel free to reach out.</p>
+    <!-- Replace with your real email address -->
+    <a class="contact-email" href="mailto:your@email.com">your@email.com</a>
+  </section>
+
+  <footer>
+    © 2026 Sarina Lin · Built with GitHub Pages
+  </footer>
+
+  <script></script>
+
+</body>
+</html>
