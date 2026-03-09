@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undergraduate Researcher — Sarina Lin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <style>
+    /* ── PAGE-SPECIFIC STYLES ── */
+
+    .page-hero {
+      padding: 10rem 4rem 4rem;
+      background: var(--cream);
+      border-bottom: 1px solid var(--light-line);
+    }
+    .page-hero .section-label { margin-bottom: 0.6rem; }
+    .page-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300; line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .page-hero .subtitle {
+      font-size: 0.95rem; color: var(--mid);
+      max-width: 600px; line-height: 1.8;
+    }
+
+    /* intro two-col */
+    .intro-section {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+      padding: 5rem 4rem;
+      background: #fff;
+    }
+    .intro-text p {
+      font-size: 1rem; color: var(--mid); line-height: 1.85;
+    }
+    .intro-img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 12px 14px 0 var(--light-line);
+    }
+    .img-placeholder {
+      width: 100%; aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #e8e0d5, #d4c9bc);
+      border-radius: 2px;
+      box-shadow: 12px 14px 0 var(--light-line);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.5rem;
+      color: var(--mid); font-size: 0.78rem; text-align: center;
+    }
+    .img-placeholder svg { opacity: 0.35; }
+
+    /* content blocks alternating */
+    .content-block {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: start;
+      padding: 5rem 4rem;
+    }
+    .content-block.reverse { direction: rtl; }
+    .content-block.reverse > * { direction: ltr; }
+    .content-block.bg-white { background: #fff; }
+    .content-block.bg-cream { background: var(--cream); }
+
+    .block-text .block-label {
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--warm); margin-bottom: 0.6rem;
+    }
+    .block-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400; margin-bottom: 1.4rem;
+      line-height: 1.15;
+    }
+    .block-text p {
+      font-size: 0.95rem; color: var(--mid);
+      line-height: 1.85; margin-bottom: 1rem;
+    }
+
+    .block-img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 12px 14px 0 var(--light-line);
+    }
+
+    /* back link */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--mid); text-decoration: none;
+      padding: 2rem 4rem 0;
+      transition: color 0.2s;
+      display: block;
+    }
+    .back-link:hover { color: var(--warm); }
+
+    @media (max-width: 900px) {
+      .page-hero { padding: 8rem 2rem 3rem; }
+      .intro-section,
+      .content-block { grid-template-columns: 1fr; padding: 3rem 2rem; gap: 2rem; }
+      .content-block.reverse { direction: ltr; }
+      .back-link { padding: 2rem 2rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="../index.html">Sarina Lin</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="../index.html#experience">Experience ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="undergraduate-researcher.html">Undergraduate Researcher</a></li>
+          <li><a href="hippocampus-auv.html">Hippocampus AUV Intern</a></li>
+          <li><a href="simi-valley.html">Simi Valley Intern</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="../index.html#extras">Extra-Curriculars ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="calsol.html">CalSol</a></li>
+          <li><a href="creek-project.html">The Creek Project</a></li>
+        </ul>
+      </li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <a class="back-link" style="padding:0 0 1.5rem;" href="../index.html#experience">← Back to Experience</a>
+    <p class="section-label">Research · UC Berkeley</p>
+    <h1>Undergraduate Researcher</h1>
+    <p class="subtitle">Additive Manufacturing &amp; Metamaterials Lab · May 2025 – Present</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-section">
+    <div class="intro-text">
+      <p>
+        Since May 2025, I have worked with the Additive Manufacturing and Metamaterials research
+        team at UC Berkeley. I was brought in to continue research begun by a PhD candidate on a
+        long-term leave. My work has been on developing and integrating flexible PCBs onto robotic
+        hand modules for localized force sensing.
+      </p>
+    </div>
+    <div>
+      <!--
+        TO ADD YOUR IMAGE:
+        Replace the placeholder below with:
+        <img class="intro-img" src="../images/experience/undergrad-1.jpg" alt="Lab overview">
+      -->
+      <div class="img-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+        <span>Add image here</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 1: Compliant Mechanism -->
+  <div class="content-block bg-cream">
+    <div class="block-text">
+      <p class="block-label">01 — Mechanical Design</p>
+      <h2>Compliant Mechanism</h2>
+      <p>
+        Building upon an initial single compliant mechanism, I developed a multi-array architecture
+        capable of sensing forces across multiple directions while mechanically decoupling signals
+        to independently resolve strain in the x and y axes.
+      </p>
+      <p>
+        The arrayed configuration expanded the operational range of the sensor and improved
+        measurement robustness by distributing loads across multiple structural elements. By
+        aggregating and averaging the signals generated by each strut, the design reduced localized
+        noise and produced more stable and reliable strain measurements.
+      </p>
+    </div>
+    <div>
+      <!--
+        TO ADD YOUR IMAGE:
+        <img class="block-img" src="../images/experience/undergrad-compliant.jpg" alt="Compliant mechanism">
+      -->
+      <div class="img-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+        <span>Add image here</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 2: PCB Design (reversed) -->
+  <div class="content-block bg-white reverse">
+    <div class="block-text">
+      <p class="block-label">02 — Electronics</p>
+      <h2>PCB Design</h2>
+      <p>
+        Two-layer flexible PCBs were designed in tandem with the compliant mechanism to mount at
+        the fingertip and provide a reliable electrical connection to the primary processing board
+        located at the base of the robotic finger. The flexible substrate allowed the circuitry to
+        conform to the finger's motion while maintaining stable electrical connections during actuation.
+      </p>
+      <p>
+        The primary design challenge was integrating the PCB with the piezoelectric sensing plates
+        and the compliant mechanism in a stacked configuration, where the compliant structure required
+        a direct electrical ground connection despite being separated from the PCB by the piezoelectric
+        layer. To address this, individual copper wires were routed between the PCB grounding pads
+        and the compliant mechanism struts.
+      </p>
+      <p>
+        While this enabled electrical grounding, the additional wiring introduced noise and crosstalk,
+        leading to a redesign of the compliant mechanism's fabrication process. The final approach used
+        multi-material 3D printing, where the struts were printed in a resin suitable for conductive
+        plating while the connecting beams were printed in a non-plateable resin, enabling selective
+        conductivity while preserving the mechanical structure.
+      </p>
+    </div>
+    <div>
+      <!--
+        TO ADD YOUR IMAGE:
+        <img class="block-img" src="../images/experience/undergrad-pcb.jpg" alt="PCB design">
+      -->
+      <div class="img-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+        <span>Add image here</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 3: Robotic Integration -->
+  <div class="content-block bg-cream">
+    <div class="block-text">
+      <p class="block-label">03 — Prototyping</p>
+      <h2>Robotic Integration Prototyping</h2>
+      <p>
+        The initial prototype of the sensing system was implemented using a glove-based platform,
+        where a human operator acted as the robotic hand to evaluate the functionality of the sensing
+        architecture. This configuration required a dedicated PCB mounted on each finger, allowing
+        the compliant mechanism and piezoelectric sensing stack to capture force inputs during natural
+        hand motions.
+      </p>
+      <p>
+        After validating the sensing concept, development progressed to integration with a robotic
+        hand platform. To reliably mount the sensing assembly, a custom 3D-printed ring was designed
+        to attach to the robotic fingertip, providing a stable interface for securing the
+        PCB–compliant mechanism structure.
+      </p>
+      <p>
+        Through iterative testing and redesign, the compliant mechanism geometry was refined to more
+        closely mimic the behavior of a button-like interface, while the printing material was updated
+        to a resin with increased ductility and higher force tolerance, improving the durability and
+        performance of the sensing system under repeated loading.
+      </p>
+    </div>
+    <div>
+      <!--
+        TO ADD YOUR IMAGE:
+        <img class="block-img" src="../images/experience/undergrad-robot.jpg" alt="Robotic integration">
+      -->
+      <div class="img-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+        <span>Add image here</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Sarina Lin · Built with GitHub Pages
+  </footer>
+
+</body>
+</html>
