@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CalSol — Sarina Lin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+  </script>
+
+  <!-- PAGE HERO + INTRO: cream, centered -->
+  <div class="page-hero">
+    <h1>Vehicle Mold Design and Enclosures Lead</h1>
+    <p class="section-label">UC Berkeley Solar Vehicle Racing Team · Sept 2022 – Present</p>
+    <p class="intro">
+      As a member of CalSol, I lead the enclosures team, working on the multidisciplinary integration 
+      of electronics and solar components into the vehicle. Previously, I was on the composites team, 
+      where I worked on aerodynamics validation and composites testing for our tenth-generation vehicle, 
+      Excalibur.
+    </p>
+  </div>
+
+  <!-- BLOCK 1 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">01 — Draft Angle Layup Testing</h2>
+      <p>
+        As Vehicle Mold Design Lead, I focused on developing and validating mold geometries for the composite 
+        vehicle body, with particular attention to draft angles and manufacturability. To evaluate how different 
+        draft angles would affect part release and layup quality, I designed and fabricated a series of test molds 
+        using 3D printing. These prototypes allowed for rapid iteration and physical testing of demolding behavior, 
+        surface finish, and composite layup consistency. 
+      </p>
+      <p>
+        After identifying promising geometries, I transitioned to producing molds using the same materials and 
+        processes intended for the final vehicle layup, allowing us to validate manufacturing methods under realistic 
+        conditions. Through repeated testing and iteration, including direct evaluation of draft angles during demolding, 
+        we refined the mold design and layup workflow to ensure a smooth and reliable manufacturing process when 
+        producing the full vehicle body.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+       <img class="block-img" src="../images/experience/multiarray.jpg" alt="Multiarray compliant mechanism">
+    </div>
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">02 — Enclosures Manufacturing</h2>
+      <p>
+        When manufacturing the enclosures, the primary considerations were the material properties required 
+        to protect onboard electronics while minimizing overall system weight. The enclosures needed to withstand 
+        outdoor operating conditions, including exposure to rain and prolonged UV radiation, while maintaining 
+        structural integrity and meeting strict mass constraints.
+      </p>
+      <p>
+        Two primary material options were evaluated: ABS and polypropylene (PP). ABS offered greater environmental 
+        protection and lower cost, but at the expense of increased weight. After evaluating these tradeoffs, I 
+        implemented a hybrid material strategy. ABS was used for enclosures housing more sensitive electrical components 
+        requiring greater environmental protection, while PP was used for the remaining systems where weight savings were 
+        prioritized. This approach preserved necessary environmental protection while reducing enclosure mass by 35% 
+        compared to previous designs.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/flexpcb.jpg" alt="Flexible PCB design">
+    </div>
+  </div>
+
+  <!-- BLOCK 3 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">03 — Enclosures Integration</h2>
+      <p>
+        During vehicle integration, the primary considerations for enclosure placement were minimizing wiring complexity 
+        while ensuring easy access for maintenance and removal. Determining appropriate locations required extensive 
+        cross-team coordination, as each subsystem team preferred to place their enclosures near their own components. 
+        However, physical constraints within the vehicle meant that ideal placements often conflicted with other systems. 
+        As the vehicle layout continued to evolve throughout integration, I iterated on enclosure placement multiple times, 
+        balancing wiring efficiency, accessibility, and spatial constraints to arrive at locations that optimized overall 
+        system integration.
+      </p>
+      <p>
+        The final placement introduced additional mounting challenges, as several enclosures required upside-down installation. 
+        To ensure reliable adhesion under these conditions, I conducted extensive testing across ten different epoxies. Each 
+        adhesive was evaluated for its ability to bond to the materials present in the system, including carbon fiber, polyolefin, 
+        ABS, and polypropylene. Initial testing revealed inconsistent curing due to low ambient temperatures, which negatively 
+        affected bond strength. After accounting for temperature effects in subsequent trials, ET5428 epoxy was selected for its 
+        strong adhesion across all tested materials as well as its cost effectiveness. This solution provided a reliable mounting 
+        method capable of supporting the enclosures under the vehicle’s operational conditions.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/earlyfingerprototype.jpg" alt="Early robotic integration prototype">
+    </div>
+  </div>
+
+  <!-- BLOCK 4 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">04 — Aerodynamic Analysis</h2>
+      <p>
+        Due to the limitations of being a student-led team, we did not have access to a wind tunnel large enough to test the 
+        full-scale vehicle. To validate the aerodynamic simulations, I developed a scaled testing approach using the UC Berkeley 
+        Hesse Wind Tunnel. As an initial validation step, I tested a 3D-printed sphere and compared the recorded drag data against 
+        both analytical predictions and simulated results for spheres at the tested size as well as at a scale representative of the 
+        vehicle. This allowed me to verify that the experimental setup and simulation pipeline produced consistent aerodynamic behavior.
+      </p>
+      <p>
+        After validating the testing methodology, I conducted wind tunnel testing on a scaled model of the vehicle. The measured 
+        aerodynamic data from the model was then compared with the simulated results for the full-scale car to evaluate the accuracy 
+        of the simulation predictions. This process provided confidence that the aerodynamic simulations closely represented real-world 
+        behavior, allowing the team to make informed design decisions and approach competition with a stronger understanding of how the 
+        vehicle would perform.
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/earlyfingerprototype.jpg" alt="Early robotic integration prototype">
+    </div>
+  </div>
+
+  <!-- BLOCK 5 -->
+  <div class="content-block bg-white">
+    <div class="block-text">
+      <h2 class="block-title">05 — Shell Repairs</h2>
+      <p>
+        In the year prior to my involvement with CalSol, the team built the shell of the car, but due to issues in the baking 
+        process, the shell was not structurally sound. In sharp corners, the aluminum hex core had peeled away from the outer 
+        layers of carbon fiber. Our attempts to attach new layers of carbon fiber to the aluminum hex core failed due to issues 
+        with the wax used in the original carbon fiber, causing the new layers of carbon fiber to not stick. 
+      </p>
+      <p>
+        I, along with my teammates, remedied this situation by testing for combinations of chemicals that would remove the wax. 
+        Many chemicals didn't work well on the wax by itself, but by creating a process with many different chemicals, I was able 
+        to remove enough of the wax to allow new carbon fiber layers to stick to the old carbon fiber, but not remove too much of 
+        the wax, resulting in overexposed carbon fiber.​
+      </p>
+    </div>
+    <div class="block-img-wrap">
+      <img class="block-img" src="../images/experience/earlyfingerprototype.jpg" alt="Early robotic integration prototype">
+    </div>
+  </div>
+
+</body>
+</html>
