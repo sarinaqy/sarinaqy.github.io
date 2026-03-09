@@ -100,28 +100,12 @@
 <body>
 
   <!-- NAV -->
-  <nav>
-    <a class="nav-logo" href="../index.html">Sarina Lin</a>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="../index.html#experience">Experience ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="undergraduate-researcher.html">Undergraduate Researcher</a></li>
-          <li><a href="hippocampus-auv.html">Hippocampus AUV Intern</a></li>
-          <li><a href="simi-valley.html">Simi Valley Intern</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="../index.html#extras">Extra-Curriculars ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="calsol.html">CalSol</a></li>
-          <li><a href="creek-project.html">The Creek Project</a></li>
-        </ul>
-      </li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
+<div id="nav-placeholder"></div>
+<script>
+  fetch('/nav.html')
+    .then(res => res.text())
+    .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+</script>
 
   <!-- PAGE HERO -->
   <div class="page-hero">
@@ -144,8 +128,7 @@
   <!-- BLOCK 1: Compliant Mechanism -->
   <div class="content-block bg-cream">
     <div class="block-text">
-      <p class="block-label">01 — Mechanical Design</p>
-      <h2>Compliant Mechanism</h2>
+      <h2>01 — Compliant Mechanism Design</h2>
       <p>
         Building upon an initial single compliant mechanism, I developed a multi-array architecture
         capable of sensing forces across multiple directions while mechanically decoupling signals
@@ -176,8 +159,7 @@
   <!-- BLOCK 2: PCB Design -->
   <div class="content-block bg-white">
     <div class="block-text">
-      <p class="block-label">02 — Electronics</p>
-      <h2>PCB Design</h2>
+      <h2>02 — PCB Design</h2>
       <p>
         Two-layer flexible PCBs were designed in tandem with the compliant mechanism to mount at
         the fingertip and provide a reliable electrical connection to the primary processing board
@@ -217,8 +199,7 @@
   <!-- BLOCK 3: Robotic Integration -->
   <div class="content-block bg-cream">
     <div class="block-text">
-      <p class="block-label">03 — Prototyping</p>
-      <h2>Robotic Integration Prototyping</h2>
+      <h2>03 — Robotic Integration Prototyping</h2>
       <p>
         The initial prototype of the sensing system was implemented using a glove-based platform,
         where a human operator acted as the robotic hand to evaluate the functionality of the sensing
