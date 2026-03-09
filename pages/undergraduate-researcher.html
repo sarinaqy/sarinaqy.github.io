@@ -6,116 +6,27 @@
   <title>Undergraduate Researcher — Sarina Lin</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../style.css"/>
-  <style>
-
-    .page-hero {
-      padding: 8rem 8rem 3.5rem;
-      background: var(--cream);
-      border-bottom: 1px solid var(--light-line);
-    }
-
-    .back-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--mid); text-decoration: none;
-      margin-bottom: 2rem;
-      transition: color 0.2s;
-    }
-    .back-link:hover { color: var(--warm); }
-
-    .page-hero .section-label {
-      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--warm); margin-bottom: 0.6rem;
-    }
-    .page-hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 300; line-height: 1.1;
-      margin-bottom: 0.8rem;
-    }
-    .page-hero .subtitle {
-      font-size: 0.92rem; color: var(--mid); line-height: 1.8;
-    }
-
-    /* intro — full-width text only, no image */
-    .intro-section {
-      padding: 4rem 8rem;
-      background: #fff;
-      max-width: 860px;
-    }
-    .intro-section p {
-      font-size: 1rem; color: var(--mid); line-height: 1.85;
-    }
-
-    /* content blocks: text left, image right, always */
-    .content-block {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-      padding: 4.5rem 8rem;
-    }
-    .content-block.bg-white { background: #fff; }
-    .content-block.bg-cream { background: var(--cream); }
-
-    .block-text .block-label {
-      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--warm); margin-bottom: 0.6rem;
-    }
-    .block-text h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      font-weight: 400; margin-bottom: 1.2rem;
-      line-height: 1.15;
-    }
-    .block-text p {
-      font-size: 0.92rem; color: var(--mid);
-      line-height: 1.85; margin-bottom: 1rem;
-    }
-
-    .block-img-wrap {
-      display: flex; align-items: flex-start; justify-content: flex-start;
-    }
-    .block-img {
-      width: 80%; aspect-ratio: 4/3; object-fit: cover;
-      border-radius: 2px;
-    }
-    .img-placeholder {
-      width: 80%; aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #e8e0d5, #d4c9bc);
-      border-radius: 2px;
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: 0.5rem;
-      color: var(--mid); font-size: 0.78rem; text-align: center;
-    }
-    .img-placeholder svg { opacity: 0.35; }
-
-    @media (max-width: 900px) {
-      .page-hero, .intro-section { padding-left: 2rem; padding-right: 2rem; }
-      .content-block { grid-template-columns: 1fr; padding: 3rem 2rem; gap: 2rem; }
-      .block-img, .img-placeholder { width: 100%; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
   <!-- NAV -->
-<div id="nav-placeholder"></div>
-<script>
-  fetch('/nav.html')
-    .then(res => res.text())
-    .then(html => document.getElementById('nav-placeholder').innerHTML = html);
-</script>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('/nav.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+  </script>
 
   <!-- PAGE HERO -->
   <div class="page-hero">
-    <a class="back-link" href="../index.html#experience">← Back to Experience</a>
+    <a class="back-link" href="/index.html#experience">← Back to Experience</a>
     <p class="section-label">Research · UC Berkeley</p>
     <h1>Undergraduate Researcher</h1>
     <p class="subtitle">Additive Manufacturing &amp; Metamaterials Lab · May 2025 – Present</p>
   </div>
 
-  <!-- INTRO: text only, no image -->
+  <!-- INTRO -->
   <div class="intro-section">
     <p>
       Since May 2025, I have worked with the Additive Manufacturing and Metamaterials research
@@ -128,7 +39,7 @@
   <!-- BLOCK 1: Compliant Mechanism -->
   <div class="content-block bg-cream">
     <div class="block-text">
-      <h2>01 — Compliant Mechanism Design</h2>
+      <h2 class="block-title"><span>01 —</span> Compliant Mechanism Design</h2>
       <p>
         Building upon an initial single compliant mechanism, I developed a multi-array architecture
         capable of sensing forces across multiple directions while mechanically decoupling signals
@@ -159,7 +70,7 @@
   <!-- BLOCK 2: PCB Design -->
   <div class="content-block bg-white">
     <div class="block-text">
-      <h2>02 — PCB Design</h2>
+      <h2 class="block-title"><span>02 —</span> PCB Design</h2>
       <p>
         Two-layer flexible PCBs were designed in tandem with the compliant mechanism to mount at
         the fingertip and provide a reliable electrical connection to the primary processing board
@@ -199,7 +110,7 @@
   <!-- BLOCK 3: Robotic Integration -->
   <div class="content-block bg-cream">
     <div class="block-text">
-      <h2>03 — Robotic Integration Prototyping</h2>
+      <h2 class="block-title"><span>03 —</span> Robotic Integration Prototyping</h2>
       <p>
         The initial prototype of the sensing system was implemented using a glove-based platform,
         where a human operator acted as the robotic hand to evaluate the functionality of the sensing
@@ -234,6 +145,10 @@
       </div>
     </div>
   </div>
+
+  <footer>
+    © 2026 Sarina Lin · Built with GitHub Pages
+  </footer>
 
 </body>
 </html>
