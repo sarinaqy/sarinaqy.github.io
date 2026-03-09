@@ -109,26 +109,9 @@
 
 .block-img {
   width: 85%;
-  aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 2px;
 }
-
-.img-placeholder {
-  width: 85%;
-  aspect-ratio: 4/3;
-  background: linear-gradient(135deg, #e8e0d5, #d4c9bc);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5rem;
-  color: var(--mid);
-  font-size: 0.78rem;
-  text-align: center;
-}
-.img-placeholder svg { opacity: 0.35; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
