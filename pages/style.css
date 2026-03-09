@@ -6,12 +6,10 @@
      <link rel="stylesheet" href="style.css"/>
    ============================================================ */
 
-/* ── PAGE HERO ── */
-.page-hero {
-  padding: 7rem 8rem 3.5rem;
+/* ── BACK LINK ── */
+.back-link-wrap {
   background: var(--cream);
-  border-bottom: 1px solid var(--light-line);
-  text-align: center;
+  padding: 5.5rem 8rem 0;
 }
 
 .back-link {
@@ -23,10 +21,17 @@
   text-transform: uppercase;
   color: var(--mid);
   text-decoration: none;
-  margin-bottom: 1.8rem;
   transition: color 0.2s;
 }
 .back-link:hover { color: var(--warm); }
+
+/* ── PAGE HERO ── */
+.page-hero {
+  padding: 1.5rem 8rem 3.5rem;
+  background: var(--cream);
+  border-bottom: 1px solid var(--light-line);
+  text-align: center;
+}
 
 .page-hero .section-label {
   font-size: 0.72rem;
@@ -50,19 +55,12 @@
   line-height: 1.8;
 }
 
-/* ── INTRO (text only, centered) ── */
-.intro-section {
-  padding: 4rem 8rem;
-  background: #fff;
-}
-
-.intro-section p {
+.page-hero .intro {
   font-size: 1rem;
   color: var(--mid);
   line-height: 1.85;
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 640px;
+  margin: 1.5rem auto 0;
 }
 
 /* ── CONTENT BLOCKS ── */
@@ -133,8 +131,8 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .page-hero { padding: 7rem 2rem 3rem; }
-  .intro-section { padding: 3rem 2rem; }
+  .back-link-wrap { padding: 5rem 2rem 0; }
+  .page-hero { padding: 1.5rem 2rem 3rem; }
   .content-block { grid-template-columns: 1fr; padding: 3rem 2rem; gap: 2rem; }
   .block-img, .img-placeholder { width: 100%; }
   .block-img-wrap { justify-content: flex-start; }
