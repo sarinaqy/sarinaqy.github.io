@@ -1,0 +1,140 @@
+/* ============================================================
+   pages/style.css
+   Shared styles for all subpages. Always include alongside
+   the root style.css:
+     <link rel="stylesheet" href="../style.css"/>
+     <link rel="stylesheet" href="style.css"/>
+   ============================================================ */
+
+/* ── PAGE HERO ── */
+.page-hero {
+  padding: 7rem 8rem 3.5rem;
+  background: var(--cream);
+  border-bottom: 1px solid var(--light-line);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid);
+  text-decoration: none;
+  margin-bottom: 1.8rem;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--warm); }
+
+.page-hero .section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--warm);
+  margin-bottom: 0.6rem;
+}
+
+.page-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+
+.page-hero .subtitle {
+  font-size: 0.92rem;
+  color: var(--mid);
+  line-height: 1.8;
+}
+
+/* ── INTRO (text only, centered) ── */
+.intro-section {
+  padding: 4rem 8rem;
+  background: #fff;
+}
+
+.intro-section p {
+  font-size: 1rem;
+  color: var(--mid);
+  line-height: 1.85;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── CONTENT BLOCKS ── */
+.content-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  /* equal padding on both sides so text and image edges line up */
+  padding: 4.5rem 8rem;
+}
+
+.content-block.bg-white { background: #fff; }
+.content-block.bg-cream { background: var(--cream); }
+
+/* ── BLOCK TEXT ── */
+.block-text .block-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.4rem;
+  color: var(--dark);
+}
+
+.block-text .block-title span {
+  color: var(--warm);
+  font-size: 0.9em;
+  margin-right: 0.5rem;
+}
+
+.block-text p {
+  font-size: 0.92rem;
+  color: var(--mid);
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+
+/* ── BLOCK IMAGE ── */
+.block-img-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.block-img {
+  width: 85%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.img-placeholder {
+  width: 85%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #e8e0d5, #d4c9bc);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--mid);
+  font-size: 0.78rem;
+  text-align: center;
+}
+.img-placeholder svg { opacity: 0.35; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .page-hero { padding: 7rem 2rem 3rem; }
+  .intro-section { padding: 3rem 2rem; }
+  .content-block { grid-template-columns: 1fr; padding: 3rem 2rem; gap: 2rem; }
+  .block-img, .img-placeholder { width: 100%; }
+  .block-img-wrap { justify-content: flex-start; }
+}
