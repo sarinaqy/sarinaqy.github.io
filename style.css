@@ -108,7 +108,6 @@ nav {
   width: 340px; height: 420px;
   background: linear-gradient(135deg, #e8e0d5 0%, #d4c9bc 100%);
   border-radius: 2px;
-  box-shadow: 16px 20px 0 var(--light-line);
   display: flex; align-items: center; justify-content: center;
   flex-direction: column; gap: 0.5rem;
   color: var(--mid); font-size: 0.8rem; text-align: center;
