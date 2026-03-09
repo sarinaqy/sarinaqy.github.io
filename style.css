@@ -195,6 +195,8 @@ section { padding: 6rem 4rem; }
   border-bottom: 1px solid var(--warm);
   padding-bottom: 2px;
   transition: opacity 0.2s;
+  width: 260px;
+  text-align: center;
 }
 .contact-email:hover,
 .contact-linkedin:hover { opacity: 0.7; }
